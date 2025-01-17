@@ -1,9 +1,19 @@
 <ion-content [fullscreen]="true">
 
-  <h1>Hello world</h1>
-
-  <ion-button (click)="goToLogin()" expand="block" fill="clear" shape="round">
-    Login
-  </ion-button>
+  <swiper-container>
+    <swiper-slide [ngStyle]="{'background-image': 'url(assets/imgs/screen1.png)', 'background-position': 'center', 'background-size': 'cover', 'background-repeat': 'no-repeat'}">
+      <ion-button class="skip-button" fill="clear" color="light" (click)="goToLogin()">SKIP</ion-button>
+    </swiper-slide>
+    <swiper-slide [ngStyle]="{'background-image': 'url(assets/imgs/screen2.png)', 'background-position': 'center', 'background-size': 'cover', 'background-repeat': 'no-repeat'}">
+      <ion-button class="skip-button" fill="clear" color="light" (click)="goToLogin()">SKIP</ion-button>
+    </swiper-slide>
+    <swiper-slide [ngStyle]="{'background-image': 'url(assets/imgs/screen3.png)', 'background-position': 'center', 'background-size': 'cover', 'background-repeat': 'no-repeat'}">
+      <ion-button shape="round" color="light" (click)="goToLogin()" class="transformButton">
+        <ion-text color="primary">
+          <strong>Let's Start</strong>
+        </ion-text>
+      </ion-button>
+    </swiper-slide>
+  </swiper-container>
 
 </ion-content>
